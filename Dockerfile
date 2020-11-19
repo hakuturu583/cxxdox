@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk update && apk upgrade && apk add --no-cache python3 && python3 -m ensurepip && pip3 install --upgrade pip setuptools
+RUN apk update && apk upgrade && apk add --no-cache python3-dev gcc musl-dev linux-headers && python3 -m ensurepip && pip3 install --upgrade pip setuptools
 
 RUN pip3 install mkdocs-material
 
